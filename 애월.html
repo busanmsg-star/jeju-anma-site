@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO 최적화 메타 태그 -->
+    <title>JH Biz | 프리미엄 제주 출장마사지 & 제주도 안마 (애월, 중문, 서귀포)</title>
+    <meta name="description" content="제주 전 지역 30분 내 총알 방문! 최고급 프리미엄 제주 출장마사지, 제주 호텔마사지, 제주 홈타이 전문 JH Biz입니다. 애월, 중문, 함덕, 서귀포 어디든 찾아가는 VVIP 힐링 케어. 예약: 010-3414-3304">
+    <meta name="keywords" content="제주 출장마사지, 제주도 안마, 제주 호텔마사지, 제주 홈타이, 애월 출장마사지, 중문 출장마사지, 서귀포 출장마사지">
+    <meta name="author" content="JH Biz">
+    
+    <!-- Open Graph 태그 (카카오톡, 페이스북 공유 시 최적화) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jeju-anma.com/">
+    <meta property="og:title" content="JH Biz | VVIP 제주 출장마사지">
+    <meta property="og:description" content="여행의 피로를 완벽하게 풀어드리는 1:1 맞춤형 제주 호텔마사지 & 홈타이. 지금 바로 예약하세요.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+
+    <!-- 폰트 및 아이콘 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans KR"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#fef2f2',
+                            100: '#fee2e2',
+                            500: '#ef4444',
+                            600: '#dc2626', // Main Red
+                            700: '#b91c1c',
+                            900: '#7f1d1d',
+                            950: '#450a0a',
+                        },
+                        dark: {
+                            900: '#0a0a0a',
+                            800: '#171717',
+                            700: '#262626',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Noto Sans KR', sans-serif; background-color: #0a0a0a; color: #f5f5f5; }
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #ef4444, #fca5a5);
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.95)), url('https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .aewol-hero-bg {
+            background-image: linear-gradient(to bottom, rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 1)), url('https://images.unsplash.com/photo-1552528148-f620bd30d951?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .glass-card {
+            background: rgba(23, 23, 23, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(239, 68, 68, 0.1);
+        }
+        /* Hide scrollbar for clean look */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-thumb { background: #dc2626; border-radius: 4px; }
+        
+        .page-transition {
+            animation: fadeIn 0.4s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-600 selection:text-white">
+
+    <!-- 상단 네비게이션바 (고정) -->
+    <header class="fixed w-full top-0 z-50 bg-dark-900/90 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 cursor-pointer" onclick="navigate('home')">
+                    <span class="text-2xl font-black tracking-tighter"><span class="text-brand-600">JH</span> Biz.</span>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-sm font-medium text-gray-300 hover:text-brand-500 transition">서비스 소개</a>
+                    <a href="#pricing" class="text-sm font-medium text-gray-300 hover:text-brand-500 transition">코스 안내</a>
+                    <a href="#reviews" class="text-sm font-medium text-gray-300 hover:text-brand-500 transition">고객 후기</a>
+                    <a href="#areas" class="text-sm font-medium text-gray-300 hover:text-brand-500 transition">출장 지역</a>
+                </nav>
+                <div class="flex items-center">
+                    <a href="tel:010-3414-3304" class="hidden sm:flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white px-5 py-2.5 rounded-full font-bold transition shadow-[0_0_15px_rgba(220,38,38,0.5)]">
+                        <i data-lucide="phone-call" class="w-4 h-4"></i>
+                        010-3414-3304
+                    </a>
+                    <!-- Mobile menu button -->
+                    <button class="md:hidden text-gray-300 hover:text-white p-2">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 메인 컨텐츠 영역 (SPA 라우팅을 위해 컨테이너 분리) -->
+    <main id="app-container" class="pt-20 pb-24">
+        
+        <!-- ======================= 홈(Home) 뷰 ======================= -->
+        <div id="view-home" class="block page-transition">
+            
+            <!-- Hero Section -->
+            <section class="hero-bg relative py-32 sm:py-48 flex items-center justify-center text-center">
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent to-dark-900"></div>
+                <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <span class="inline-block py-1 px-3 rounded-full bg-brand-900/50 border border-brand-500/30 text-brand-400 text-sm font-bold mb-6 tracking-widest">
+                        PREMIUM JEJU MASSAGE
+                    </span>
+                    <h1 class="text-4xl sm:text-6xl font-black text-white mb-6 leading-tight">
+                        제주의 푸른 밤,<br>
+                        당신의 피로를 <span class="text-gradient">지워드립니다</span>
+                    </h1>
+                    <p class="text-lg sm:text-xl text-gray-400 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                        여행의 피로, 비즈니스의 스트레스. 이제 계신 곳에서 편안하게 최고급 <strong>제주 출장마사지</strong>를 경험하세요. 엄격한 기준의 전문 테라피스트가 30분 내 방문합니다.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="tel:010-3414-3304" class="inline-flex justify-center items-center gap-2 bg-brand-600 hover:bg-brand-500 text-white px-8 py-4 rounded-full font-bold text-lg transition shadow-lg shadow-brand-600/30">
+                            <i data-lucide="phone" class="w-5 h-5"></i>
+                            지금 바로 예약하기
+                        </a>
+                        <a href="#pricing" class="inline-flex justify-center items-center gap-2 bg-dark-800 hover:bg-dark-700 text-white px-8 py-4 rounded-full font-bold text-lg border border-gray-700 transition">
+                            코스 및 가격 확인
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 서비스 소개 (SEO 핵심 키워드 배치) -->
+            <section id="about" class="py-24 bg-dark-900 relative">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-16">
+                        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">왜 <span class="text-brand-500">JH Biz</span> 인가요?</h2>
+                        <div class="w-16 h-1 bg-brand-600 mx-auto rounded-full"></div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- Feature 1 -->
+                        <div class="glass-card p-8 rounded-2xl hover:-translate-y-2 transition duration-300 group">
+                            <div class="w-14 h-14 bg-brand-900/50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-600 transition">
+                                <i data-lucide="clock" class="text-brand-400 group-hover:text-white w-7 h-7"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">제주 전 지역 30분 도착</h3>
+                            <p class="text-gray-400 leading-relaxed text-sm">
+                                제주시, 서귀포시는 물론 애월, 중문, 함덕 등 제주 전역 어디든 빠르고 안전하게 방문합니다. 기다림 없는 신속한 <strong>제주 홈타이</strong> 서비스를 약속드립니다.
+                            </p>
+                        </div>
+                        <!-- Feature 2 -->
+                        <div class="glass-card p-8 rounded-2xl hover:-translate-y-2 transition duration-300 group border-brand-500/30 relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-24 h-24 bg-brand-600/10 rounded-bl-full -z-10"></div>
+                            <div class="w-14 h-14 bg-brand-900/50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-600 transition">
+                                <i data-lucide="sparkles" class="text-brand-400 group-hover:text-white w-7 h-7"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">5성급 호텔식 프리미엄</h3>
+                            <p class="text-gray-400 leading-relaxed text-sm">
+                                단순한 마사지를 넘어선 힐링. 특급 호텔 스파 출신 테라피스트들의 섬세한 손길로 최고급 <strong>제주 호텔마사지</strong>의 감동을 그대로 객실에서 느껴보세요.
+                            </p>
+                        </div>
+                        <!-- Feature 3 -->
+                        <div class="glass-card p-8 rounded-2xl hover:-translate-y-2 transition duration-300 group">
+                            <div class="w-14 h-14 bg-brand-900/50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-600 transition">
+                                <i data-lucide="shield-check" class="text-brand-400 group-hover:text-white w-7 h-7"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">100% 검증된 테라피스트</h3>
+                            <p class="text-gray-400 leading-relaxed text-sm">
+                                체계적인 교육 과정을 수료한 20대 전문 관리사만 채용합니다. 기존의 <strong>제주도 안마</strong>와는 차원이 다른 품격 있는 케어를 보장합니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 가격표 (Pricing) -->
+            <section id="pricing" class="py-24 bg-dark-800">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-16">
+                        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">VVIP 코스 안내</h2>
+                        <p class="text-gray-400">고객님의 컨디션에 맞춘 세분화된 프리미엄 프로그램을 제공합니다.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                        <!-- Basic -->
+                        <div class="bg-dark-900 rounded-2xl border border-gray-800 p-8 flex flex-col">
+                            <h3 class="text-2xl font-bold text-white mb-2">A Course</h3>
+                            <p class="text-gray-400 text-sm mb-6">베이직 타이 & 건식 케어 (90분)</p>
+                            <div class="mb-8">
+                                <span class="text-4xl font-black text-white">130,000</span><span class="text-gray-500 ml-1">원</span>
+                            </div>
+                            <ul class="space-y-4 mb-8 flex-grow">
+                                <li class="flex items-start text-sm text-gray-300"><i data-lucide="check" class="w-5 h-5 text-brand-500 mr-2 shrink-0"></i> 전신 건식 마사지</li>
+                                <li class="flex items-start text-sm text-gray-300"><i data-lucide="check" class="w-5 h-5 text-brand-500 mr-2 shrink-0"></i> 스트레칭 및 피로 회복</li>
+                                <li class="flex items-start text-sm text-gray-300"><i data-lucide="check" class="w-5 h-5 text-brand-500 mr-2 shrink-0"></i> 제주 시내권 교통비 포함</li>
+                            </ul>
+                            <a href="tel:010-3414-3304" class="w-full block text-center bg-dark-800 hover:bg-dark-700 text-white font-bold py-3 rounded-xl border border-gray-700 transition">예약 문의</a>
+                        </div>
+
+                        <!-- VIP (Featured) -->
+                        <div class="bg-gradient-to-b from-dark-900 to-brand-950 rounded-2xl border border-brand-500/50 p-8 flex flex-col relative transform lg:-translate-y-4 shadow-2xl shadow-brand-900/20">
+                            <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand-600 text-white text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wide">Best Choice</div>
+                            <h3 class="text-2xl font-bold text-brand-400 mb-2">VIP Course</h3>
+                            <p class="text-gray-300 text-sm mb-6">스페셜 아로마 힐링 (120분)</p>
+                            <div class="mb-8">
+                                <span class="text-4xl font-black text-white">200,000</span><span class="text-gray-500 ml-1">원</span>
+                            </div>
+                            <ul class="space-y-4 mb-8 flex-grow">
+                                <li class="flex items-start text-sm text-gray-200"><i data-lucide="check" class="w-5 h-5 text-brand-400 mr-2 shrink-0"></i> 최고급 아로마 오일 테라피</li>
+                                <li class="flex items-start text-sm text-gray-200"><i data-lucide="check" class="w-5 h-5 text-brand-400 mr-2 shrink-0"></i> 림프 순환 및 스웨디시</li>
+                                <li class="flex items-start text-sm text-gray-200"><i data-lucide="check" class="w-5 h-5 text-brand-400 mr-2 shrink-0"></i> 호텔 및 리조트 맞춤형 케어</li>
+                                <li class="flex items-start text-sm text-brand-300 font-medium"><i data-lucide="star" class="w-5 h-5 text-brand-400 mr-2 shrink-0"></i> 제주 호텔마사지 인기 코스</li>
+                            </ul>
+                            <a href="tel:010-3414-3304" class="w-full block text-center bg-brand-600 hover:bg-brand-500 text-white font-bold py-4 rounded-xl transition shadow-lg">전화로 즉시 예약</a>
+                        </div>
+
+                        <!-- VVIP -->
+                        <div class="bg-dark-900 rounded-2xl border border-gray-800 p-8 flex flex-col">
+                            <h3 class="text-2xl font-bold text-white mb-2">VVIP Course</h3>
+                            <p class="text-gray-400 text-sm mb-6">시그니처 황제 케어 (150분)</p>
+                            <div class="mb-8">
+                                <span class="text-4xl font-black text-white">250,000</span><span class="text-gray-500 ml-1">원</span>
+                            </div>
+                            <ul class="space-y-4 mb-8 flex-grow">
+                                <li class="flex items-start text-sm text-gray-300"><i data-lucide="check" class="w-5 h-5 text-brand-500 mr-2 shrink-0"></i> 2인 테라피스트 동시 케어 가능 (문의)</li>
+                                <li class="flex items-start text-sm text-gray-300"><i data-lucide="check" class="w-5 h-5 text-brand-500 mr-2 shrink-0"></i> 전신 스크럽 및 스톤 테라피</li>
+                                <li class="flex items-start text-sm text-gray-300"><i data-lucide="check" class="w-5 h-5 text-brand-500 mr-2 shrink-0"></i> 프라이빗 독채 펜션/골프장 출장 전문</li>
+                            </ul>
+                            <a href="tel:010-3414-3304" class="w-full block text-center bg-dark-800 hover:bg-dark-700 text-white font-bold py-3 rounded-xl border border-gray-700 transition">예약 문의</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 출장 지역 안내 (SPA 라우팅 링크) -->
+            <section id="areas" class="py-24 bg-dark-900">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h2 class="text-3xl font-bold text-white mb-4">제주 전 지역 빠른 방문</h2>
+                    <p class="text-gray-400 mb-12">원하시는 지역을 클릭하여 상세 정보를 확인하세요.</p>
+                    
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <a href="#애월출장" class="px-6 py-3 rounded-full bg-brand-900/30 border border-brand-500 text-white hover:bg-brand-600 transition shadow-[0_0_15px_rgba(239,68,68,0.2)] font-bold">⭐ 애월 출장마사지</a>
+                        <a href="#중문출장" class="px-6 py-3 rounded-full bg-dark-800 border border-gray-700 text-white hover:border-brand-500 hover:text-brand-400 transition"># 중문 출장마사지</a>
+                        <a href="#서귀포출장" class="px-6 py-3 rounded-full bg-dark-800 border border-gray-700 text-white hover:border-brand-500 hover:text-brand-400 transition"># 서귀포 출장마사지</a>
+                        <a href="#제주시출장" class="px-6 py-3 rounded-full bg-dark-800 border border-gray-700 text-white hover:border-brand-500 hover:text-brand-400 transition"># 제주시 출장마사지</a>
+                        <a href="#함덕출장" class="px-6 py-3 rounded-full bg-dark-800 border border-gray-700 text-white hover:border-brand-500 hover:text-brand-400 transition"># 함덕 출장마사지</a>
+                    </div>
+                </div>
+            </section>
+
+        </div> <!-- End of Home View -->
+
+
+        <!-- ======================= 애월 출장마사지 전용 뷰 (New!) ======================= -->
+        <div id="view-aewol" class="hidden page-transition">
+            
+            <!-- 애월 전용 Hero Section -->
+            <section class="aewol-hero-bg relative py-32 sm:py-40 flex items-center justify-center text-center">
+                <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
+                    <span class="inline-block py-1 px-4 rounded-full bg-brand-600 text-white text-sm font-bold mb-4 shadow-lg">
+                        제주 애월읍 전 지역 20분 도착
+                    </span>
+                    <h1 class="text-4xl sm:text-6xl font-black text-white mb-6">
+                        프리미엄 <span class="text-brand-500">애월 출장마사지</span>
+                    </h1>
+                    <p class="text-lg sm:text-xl text-gray-300 mb-8 max-w-2xl mx-auto font-light leading-relaxed">
+                        아름다운 한담해변의 노을처럼, 지친 당신의 몸과 마음에 깊은 휴식을 선사합니다. 애월의 호텔, 펜션, 풀빌라 어디서든 최고급 스파를 경험하세요.
+                    </p>
+                    <a href="tel:010-3414-3304" class="inline-flex justify-center items-center gap-2 bg-brand-600 hover:bg-brand-500 text-white px-8 py-4 rounded-full font-bold text-lg transition shadow-[0_0_20px_rgba(220,38,38,0.6)]">
+                        <i data-lucide="phone-call" class="w-5 h-5"></i>
+                        애월 지역 즉시 예약
+                    </a>
+                </div>
+            </section>
+
+            <!-- 애월 지역 특화 설명 -->
+            <section class="py-20 bg-dark-900 border-b border-white/5">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h2 class="text-3xl font-bold text-white mb-6">왜 애월에서 <span class="text-brand-500">JH Biz</span>를 찾을까요?</h2>
+                            <ul class="space-y-6">
+                                <li class="flex items-start">
+                                    <div class="bg-dark-800 p-3 rounded-xl text-brand-500 mr-4 border border-gray-700">
+                                        <i data-lucide="navigation" class="w-6 h-6"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-lg font-bold text-white mb-1">곽지, 한담, 하귀 등 20분 내 도착</h4>
+                                        <p class="text-gray-400 text-sm">애월읍 주요 지역에 전담 관리사와 기사가 상주하여, 호출 즉시 가장 빠르게 숙소로 방문합니다.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-dark-800 p-3 rounded-xl text-brand-500 mr-4 border border-gray-700">
+                                        <i data-lucide="home" class="w-6 h-6"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-lg font-bold text-white mb-1">독채 펜션 / 풀빌라 맞춤 케어</h4>
+                                        <p class="text-gray-400 text-sm">애월에 밀집된 프라이빗 숙소의 특성을 고려하여, 이동식 고급 베드와 아로마 오일을 완비하여 방문합니다.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-dark-800 p-3 rounded-xl text-brand-500 mr-4 border border-gray-700">
+                                        <i data-lucide="heart" class="w-6 h-6"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-lg font-bold text-white mb-1">커플 및 가족 동반 대환영</h4>
+                                        <p class="text-gray-400 text-sm">연인과의 여행, 부모님 효도 여행 등 2인 이상 동시 관리가 가능합니다. (사전 예약 필수)</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute -inset-1 bg-gradient-to-r from-brand-600 to-brand-900 rounded-2xl blur opacity-30"></div>
+                            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="애월 출장마사지 스파" class="relative rounded-2xl border border-gray-800 shadow-2xl">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 애월 고객 후기 -->
+            <section class="py-20 bg-dark-800">
+                <div class="max-w-4xl mx-auto px-4 text-center">
+                    <h3 class="text-2xl font-bold text-white mb-10">애월 지역 방문 고객 리얼 후기</h3>
+                    <div class="bg-dark-900 p-8 rounded-3xl border border-gray-700 text-left relative">
+                        <i data-lucide="quote" class="absolute top-6 right-8 w-12 h-12 text-gray-800"></i>
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-12 h-12 rounded-full bg-brand-900/50 flex items-center justify-center font-bold text-brand-500 border border-brand-500/30">강*영</div>
+                            <div>
+                                <p class="text-white font-medium">애월 유니호텔 숙박객</p>
+                                <p class="text-brand-400 text-xs">VIP 스페셜 아로마 코스</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 leading-relaxed text-lg italic">
+                            "애월 해안도로 드라이브하고 카페거리 돌아다녔더니 다리가 너무 아팠어요. 숙소에서 나갈 힘도 없어서 불렀는데, 20분 만에 오셨고 마사지도 정말 태국 고급 스파에서 받는 느낌이었습니다. 다음 제주 여행 때도 무조건 여기 예약할게요."
+                        </p>
+                    </div>
+                    
+                    <div class="mt-12 flex justify-center">
+                        <button onclick="navigate('home')" class="inline-flex items-center px-6 py-3 border border-gray-600 rounded-full text-gray-300 hover:text-white hover:bg-dark-700 transition">
+                            <i data-lucide="arrow-left" class="w-4 h-4 mr-2"></i> 메인 홈으로 돌아가기
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+        <!-- ======================= 서브 페이지 (기타 지역별 범용 뷰) ======================= -->
+        <div id="view-area" class="hidden page-transition py-20">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <button onclick="navigate('home')" class="mb-8 inline-flex items-center text-sm text-gray-400 hover:text-white transition">
+                    <i data-lucide="arrow-left" class="w-4 h-4 mr-2"></i> 메인으로 돌아가기
+                </button>
+                
+                <div class="bg-dark-800 rounded-3xl p-8 sm:p-16 border border-gray-800 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-brand-600/10 rounded-bl-full blur-3xl -z-10"></div>
+                    
+                    <span class="inline-block py-1 px-3 rounded-full bg-dark-900 border border-gray-700 text-brand-500 text-xs font-bold mb-6">
+                        TARGET AREA
+                    </span>
+                    <h1 id="area-title" class="text-3xl sm:text-5xl font-black text-white mb-6">지역명 출장마사지</h1>
+                    <p id="area-desc" class="text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto mb-12">
+                        지역 상세 설명이 여기에 들어갑니다.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-left max-w-2xl mx-auto mb-12">
+                        <div class="bg-dark-900 p-6 rounded-xl border border-gray-700/50 flex items-start gap-4">
+                            <i data-lucide="zap" class="text-brand-500 w-6 h-6 shrink-0 mt-1"></i>
+                            <div>
+                                <h4 class="text-white font-bold mb-1">총알 방문 보장</h4>
+                                <p class="text-gray-400 text-sm">해당 지역 내 기사 및 관리사가 항상 대기 중이므로 20~30분 내 도착 가능합니다.</p>
+                            </div>
+                        </div>
+                        <div class="bg-dark-900 p-6 rounded-xl border border-gray-700/50 flex items-start gap-4">
+                            <i data-lucide="building" class="text-brand-500 w-6 h-6 shrink-0 mt-1"></i>
+                            <div>
+                                <h4 class="text-white font-bold mb-1">모든 숙소 가능</h4>
+                                <p class="text-gray-400 text-sm">호텔, 리조트, 모텔, 독채 펜션, 자택 등 고객님이 계신 곳 어디든 방문합니다.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="tel:010-3414-3304" class="inline-flex justify-center items-center gap-2 bg-brand-600 hover:bg-brand-500 text-white px-10 py-5 rounded-full font-bold text-xl transition shadow-lg shadow-brand-600/30 w-full sm:w-auto">
+                        <i data-lucide="phone-call" class="w-6 h-6"></i>
+                        이 지역 바로 예약하기
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark-950 border-t border-white/5 py-12 pb-28 md:pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
+            <div>
+                <span class="text-2xl font-black tracking-tighter text-white mb-2 block"><span class="text-brand-600">JH</span> Biz.</span>
+                <p class="text-gray-500 text-sm">제주특별자치도 전역 VVIP 출장 케어 서비스</p>
+                <p class="text-gray-600 text-xs mt-2">© 2026 JH Biz. All rights reserved.</p>
+            </div>
+            <div class="text-gray-500 text-sm">
+                <p>예약 및 문의: <strong class="text-gray-300">010-3414-3304</strong> (24시간 연중무휴)</p>
+                <p class="mt-1 text-xs text-gray-600">건전하고 품격 있는 힐링 테라피 문화만을 지향합니다.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 모바일 하단 고정 예약 버튼 (전환율 핵심) -->
+    <div class="md:hidden fixed bottom-0 left-0 w-full z-50 p-4 bg-gradient-to-t from-dark-900 to-transparent">
+        <a href="tel:010-3414-3304" class="flex justify-center items-center gap-2 bg-brand-600 text-white w-full py-4 rounded-2xl font-black text-lg shadow-[0_0_20px_rgba(220,38,38,0.4)] active:scale-95 transition-transform">
+            <i data-lucide="phone-call" class="w-5 h-5 animate-pulse"></i>
+            010-3414-3304 전화연결
+        </a>
+    </div>
+
+    <!-- 스크립트: 아이콘 렌더링 및 SPA 라우팅 로직 -->
+    <script>
+        // Lucide Icons 초기화
+        lucide.createIcons();
+
+        // 지역별 데이터 (기타 지역용)
+        const areaData = {
+            '중문출장': {
+                title: '중문 출장마사지',
+                desc: '신라, 롯데, 그랜드조선 등 중문 관광단지 내 5성급 호텔에 특화된 VVIP 호텔식 스파 서비스를 제공합니다. 샵에 갈 필요 없이 객실에서 최고의 프라이빗 힐링을 누리세요.'
+            },
+            '서귀포출장': {
+                title: '서귀포 출장마사지',
+                desc: '서귀포 시내 및 혁신도시, 인근 펜션 단지까지 신속하게 방문합니다. 관광과 골프 라운딩으로 지친 몸을 완벽하게 회복시켜 드립니다.'
+            },
+            '제주시출장': {
+                title: '제주시 출장마사지',
+                desc: '제주공항 인근, 연동, 노형동 등 제주시 전역 빠른 방문이 가능합니다. 비즈니스 출장객의 피로를 날려버릴 최고의 제주도 안마 서비스를 약속합니다.'
+            },
+            '함덕출장': {
+                title: '함덕 출장마사지',
+                desc: '함덕 해수욕장, 조천읍 일대의 숙소에 머무시는 고객님들을 위한 프리미엄 홈타이 서비스입니다. 가족 단위 여행객에게도 적극 추천합니다.'
+            }
+        };
+
+        const viewHome = document.getElementById('view-home');
+        const viewAewol = document.getElementById('view-aewol');
+        const viewArea = document.getElementById('view-area');
+        const areaTitle = document.getElementById('area-title');
+        const areaDesc = document.getElementById('area-desc');
+
+        // 라우팅 함수
+        function navigate(path) {
+            const hash = decodeURIComponent(path).replace('#', '');
+            
+            // 1. 홈 화면
+            if (hash === '' || hash === 'home' || (!areaData[hash] && hash !== '애월출장')) {
+                if(hash === '' || hash === 'home') {
+                    window.history.pushState('', document.title, window.location.pathname);
+                }
+                viewArea.classList.add('hidden');
+                viewAewol.classList.add('hidden');
+                viewHome.classList.remove('hidden');
+                window.scrollTo(0, 0);
+            } 
+            // 2. 애월 전용 화면 (독립된 랜딩 페이지 구조)
+            else if (hash === '애월출장') {
+                viewHome.classList.add('hidden');
+                viewArea.classList.add('hidden');
+                viewAewol.classList.remove('hidden');
+                window.scrollTo(0, 0);
+                document.title = `JH Biz | 애월 출장마사지 - 20분 총알방문 프리미엄 케어`;
+            }
+            // 3. 기타 지역 공통 화면
+            else if (areaData[hash]) {
+                const data = areaData[hash];
+                areaTitle.innerHTML = `<span class="text-brand-500">[${hash.replace('출장', '')}]</span> 프리미엄 출장마사지`;
+                areaDesc.innerHTML = data.desc;
+                
+                viewHome.classList.add('hidden');
+                viewAewol.classList.add('hidden');
+                viewArea.classList.remove('hidden');
+                window.scrollTo(0, 0);
+                document.title = `JH Biz | ${data.title} - 30분 총알방문`;
+            }
+        }
+
+        // URL 해시 변경 감지
+        window.addEventListener('hashchange', () => {
+            const hash = decodeURIComponent(window.location.hash);
+            if(hash.includes('출장')) {
+                navigate(hash);
+            } else {
+                if (viewHome.classList.contains('hidden')) {
+                    viewArea.classList.add('hidden');
+                    viewAewol.classList.add('hidden');
+                    viewHome.classList.remove('hidden');
+                }
+            }
+        });
+
+        // 초기 로드 시 해시 체크
+        window.addEventListener('DOMContentLoaded', () => {
+            if (window.location.hash && decodeURIComponent(window.location.hash).includes('출장')) {
+                navigate(window.location.hash);
+            }
+        });
+    </script>
+</body>
+</html>
